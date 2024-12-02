@@ -507,6 +507,7 @@ footer .socials {
 footer .socials a {
   color: #fff;
   margin: 1rem;
+  font-size: 1.6rem;
 }
 
 footer .socials a:hover,
@@ -516,6 +517,7 @@ footer .links a:hover {
 
 footer .links {
   margin-bottom: 1.4rem;
+  font-size: 1.2rem;
 }
 
 footer .links a {
@@ -524,7 +526,7 @@ footer .links a {
 }
 
 footer .credit {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   color: var(--bg);
 }
 
