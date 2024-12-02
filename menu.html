@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dorm Coffee</title>
-    <link rel="icons" href="img/bg/logo-dorm.jpeg" />
+    <!-- favicon -->
+    <link rel="icon" href="img/bg/logo-dorm.png" />
+    <link rel="apple-touch-icon" href="img/bg/logo-dorm.png" />
+    <meta name="msapplication-TileImage" content="img/bg/logo-dorm.png" />
+    <!-- preload -->
+    <link rel="preload" href="img/products/long-black-cold.jpg" as="image" />
+    <link rel="preload" href="img/products/red-velvet-hot.jpg" as="image" />
+    <link rel="preload" href="img/products/caramel-milk.jpg" as="image" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -129,7 +136,11 @@
         <template x-for="(item, index) in items" x-key="index">
           <div class="product-card">
             <div class="product-image">
-              <img :src="`img/products/${item.img}`" :alt="item.name" />
+              <img
+                :src="`img/products/${item.img}`"
+                :alt="item.name"
+                loading="lazy"
+              />
             </div>
             <div class="product-content">
               <h3 x-text="item.name"></h3>
